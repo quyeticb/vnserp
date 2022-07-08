@@ -106,3 +106,8 @@ firewall-cmd --reload
 wget https://github.com/quyeticb/vnserp/raw/main/2.6.zip -O vnserp.zip
 unzip vnserp.zip
 mv package vnserp
+rm -f vnserp.zip
+
+
+
+
