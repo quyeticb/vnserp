@@ -54,5 +54,6 @@ sudo ln -s /etc/php8z/bin/php /usr/bin/phpz
 sudo mkdir /etc/php8z/conf.d
 wget http://pear.php.net/go-pear.phar
 phpz go-pear.phar
+ln -sf /etc/php8z/bin/pecl /usr/bin/pecl
 pecl install channel://pecl.php.net/xmlrpc-1.0.0RC3
 echo "extension=xmlrpc.so" > /etc/php8z/conf.d/custom.ini
