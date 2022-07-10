@@ -18,7 +18,7 @@ if [ $osv == 7 ];
 	then
 	yum-config-manager --enable remi-php80
 	yum -y install nginx php-fpm php-common php-bcmath php-imap php-devel php-pear php-xmlrpc php-tidy php-solr php-apcu php-redis php-gd php-mysqlnd php-pdo php-xml php-mbstring php-mcrypt php-curl php-opcache php-cli php-pecl-zip
-elif:
+else
 	sudo dnf module enable php:remi-8.0 -y
 	yum -y install nginx php-fpm php-common php-bcmath php-devel php-pear php-tidy php-apcu php-redis php-gd php-mysqlnd php-pdo php-xml php-mbstring php-curl php-opcache php-cli php-pecl-zip php-xmlrpc php-solr
 fi
