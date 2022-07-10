@@ -56,4 +56,23 @@ wget http://pear.php.net/go-pear.phar
 phpz go-pear.phar
 ln -sf /etc/php8z/bin/pecl /usr/bin/pecl
 pecl install channel://pecl.php.net/xmlrpc-1.0.0RC3
-echo "extension=xmlrpc.so" > /etc/php8z/conf.d/custom.ini
+
+
+wget -O 1.zip "https://raw.githubusercontent.com/quyeticb/vnserp/main/2.6.zip"
+unzip 1.zip
+mv package /opt/vnserp
+sudo echo "phpz /opt/vnserp/tool.php" > /usr/bin/vnserp
+chmod 777 /usr/bin/vnserp
+
+
+git clone https://github.com/php/pecl-search_engine-solr.git
+cd pecl-search_engine-solr
+/etc/php8z/bin/phpize
+./configure --with-php-config=/etc/php8z/bin/php-config
+make && make install
+echo "extension=solr
+extension=xmlrpc.so" > /etc/php8z/conf.d/custom.ini
+rm -Rf *
+
+
+
