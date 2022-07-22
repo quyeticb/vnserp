@@ -58,7 +58,7 @@ ln -sf /etc/php8z/bin/pecl /usr/bin/pecl
 pecl install channel://pecl.php.net/xmlrpc-1.0.0RC3
 
 
-wget -O 1.zip "https://raw.githubusercontent.com/quyeticb/vnserp/main/2.6.zip"
+wget -O 1.zip "https://raw.githubusercontent.com/quyeticb/vnserp/main/package.zip"
 unzip 1.zip
 mv package /opt/vnserp
 sudo echo "phpz /opt/vnserp/tool.php" > /usr/bin/vnserp
