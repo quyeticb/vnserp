@@ -10,8 +10,8 @@ sudo yum -y install epel-release yum-utils
 osv=$(rpm -E %{rhel})
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-${osv}.rpm
 yum-config-manager --enable remi
-yum -y install nano unzip zip screen wget openssl zlib-devel openssl-devel libcurl-devel libxml2-devel bc gawk git
-yum -y install autoconf gcc gcc-c++ sqlite-devel libpng-devel libwebp-devel libjpeg-devel freetype-devel oniguruma-devel libtidy-devel libzip5-devel readline-devel
+yum -y --skip-broken install nano unzip zip screen wget openssl zlib-devel openssl-devel libcurl-devel libxml2-devel bc gawk git
+yum -y --skip-broken install autoconf gcc gcc-c++ sqlite-devel libpng-devel libwebp-devel libjpeg-devel freetype-devel oniguruma-devel libtidy-devel libzip5-devel readline-devel
 
 VERSION=8.0.3
 wget -qO- https://www.php.net/distributions/php-${VERSION}.tar.gz | tar -xz
