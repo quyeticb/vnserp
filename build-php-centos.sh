@@ -71,7 +71,8 @@ cd pecl-search_engine-solr
 ./configure --with-php-config=/etc/php8z/bin/php-config
 make && make install
 echo "extension=solr
-extension=xmlrpc.so" > /etc/php8z/conf.d/custom.ini
+extension=xmlrpc.so
+zend_extension=opcache.so" > /etc/php8z/conf.d/custom.ini
 rm -Rf *
 echo "net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
