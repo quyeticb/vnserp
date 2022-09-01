@@ -13,7 +13,7 @@ yum-config-manager --enable remi
 yum -y --skip-broken install nano unzip zip screen wget openssl zlib-devel openssl-devel libcurl-devel libxml2-devel bc gawk git
 yum -y --skip-broken install autoconf gcc gcc-c++ sqlite-devel libpng-devel libwebp-devel libjpeg-devel freetype-devel oniguruma-devel libtidy-devel libzip5-devel libzip readline-devel
 
-VERSION=8.0.3
+VERSION=8.1.10
 wget -qO- https://www.php.net/distributions/php-${VERSION}.tar.gz | tar -xz
 cd php-${VERSION}/ext
 git clone --depth=1 https://github.com/pmmp/pthreads.git
