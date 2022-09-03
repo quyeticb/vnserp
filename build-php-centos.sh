@@ -34,7 +34,6 @@ cd ..
     --enable-pcntl \
     --enable-gd \
     --enable-exif \
-    --enable-xmlrpc \
     --with-jpeg \
     --with-freetype \
     --with-webp \
